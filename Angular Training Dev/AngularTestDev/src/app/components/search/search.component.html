@@ -1,0 +1,37 @@
+<div class="container">
+
+</div>
+<div class="container">
+
+    <div class="row g-3">
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Enter Color of Flower" aria-label="search" [(ngModel)]="searchText">
+        </div>
+        <div class="col-sm-4">
+            <button class="btn btn-outline-secondary" type="button" 
+            [disabled]="searchText ===''" id="button-addon2" (click)="searchImages(searchText)">Search</button>
+        </div>
+      </div>
+</div><br/><br/>
+<div class="container" *ngIf="imageData.length>0">
+
+
+    <div class="row">
+        <ng-container *ngFor="let item of imageData">
+
+            <div class="col-md-4" *ngIf="item.largeImageURL">
+              <div class="thumbnail">
+                <a href="#">
+                  <img [src]="item.largeImageURL" alt="Lights" style="width:356px;height: 273px;">
+                  <div class="caption">
+                    <!-- <p>Lorem ipsum...</p> -->
+                  </div> <br/><br/>
+                </a>
+              </div>
+            </div>
+           
+        </ng-container>
+       
+      </div>
+</div>
+  

@@ -1,0 +1,9 @@
+<div class="container" >  
+    <h2>Login Page</h2>  
+    <form>  
+        <div class="form-group" class="col-sm-4" style="vertical-align:middle;"> <label for="email">User Name</label> <input type="text" class="form-control" name="uname" placeholder="Enter UserName" [(ngModel)]="loginModel.uname"> </div>  
+        <div class="form-group" class="col-sm-4" style="vertical-align:middle;"> <label for="pwd">Password</label> <input type="password" class="form-control" name="pwd" placeholder="Enter password" [(ngModel)]="loginModel.pwd"> </div>  
+        <!-- <div class="checkbox"> <label><input type="checkbox"> Remember me</label>  </div> -->
+        <br/>
+        <div style="margin-left:131px;"><button type="submit" class="btn btn-primary" (click)="loginCheck()">Login</button> </div></form>  
+</div>  
